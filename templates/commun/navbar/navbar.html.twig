@@ -1,0 +1,22 @@
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <!-- <h1><a href="#intro">The<span>Event</span></a></h1>-->
+            <a href="#" class="scrollto"><img src="/assets/img/emairie_logo.png" alt="" title=""></a>
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="buy-tickets">
+                    <a href="{{ path('mairie_projet_creation', {'ville': mairie}) }}">Nouveau Projet</a>
+                </li>
+                <li class="buy-tickets">
+                    <a href="{{ path('logout') }}">Déconnexion</a>
+                </li>
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header><!-- End Header -->

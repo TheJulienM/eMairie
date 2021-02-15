@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container">
+
+            <div id="logo" class="pull-left">
+                <!-- Uncomment below if you prefer to use a text logo -->
+                <!-- <h1><a href="#intro">The<span>Event</span></a></h1>-->
+                <a href={{ path('mairie_projet_liste', {'ville': mairie}) }} class="scrollto"><img src="/assets/img/emairie_logo.png" alt="" title=""></a>
+
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="{{ path('mairie_projet_liste',{'ville': mairie }) }}">Retour</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+
+    </header><!-- End Header -->
+
+    <!--======= Intro Section =======-->
+    <section id="contact" class="section-bg contact_projet">
+
+        <div class="container" data-aos="zoom-in">
+
+            <div class="section-header"></div>
+            <div class="section-header">
+                <h2 style="color: white;">Création de projet</h2>
+            </div>
+
+            {{ form_start(formProjetForm, {'attr' : {'class' : ''}}) }}
+                    <div class="form-row">
+                        <div class="form-group col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            {{ form_row(formProjetForm.titre, {'label' : false, 'attr' : {'class': 'form-control', 'placeholder' : 'Titre du projet'}}) }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            {{ form_row(formProjetForm.description, {'label' : false, 'attr' : {'class': 'form-control', 'placeholder' : 'Description du projet','rows' : 5}}) }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            {{ form_row(formProjetForm.image, {'label' : false, 'attr' : {}}) }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+
+            <div class="text-center"><button type="submit" class="btn btn-primary">Valider le projet</button></div>
+            {{ form_end(formProjetForm) }}
+            </div>
+
+
+
+        </div>
+    </section> <!--End Contact Section-->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>eMairie</strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="/assets/vendor/superfish/superfish.min.js"></script>
+    <script src="/assets/vendor/hoverIntent/hoverIntent.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/assets/js/main.js"></script>
+{% endblock %}
